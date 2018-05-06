@@ -72,7 +72,6 @@ As a consequence, we have a total of $26,796 - 3981 = 22815$ data points. The fi
     100045 & 41  & 1  & small  & BS/BA     & 1    & 20  & W     & 507  &     \\ \hline
     100045 & 41  & 2  & small  & MS/MA/MEd & APPR & 15  & B     & 575  &     \\ \hline
     100045 & 41  & 3  & small  & BS/BA     & 1    & 5   & W     & 610  &     \\ \hline
-    ...    &     &    &        &           &      &     &       &      &     \\ \hline
     \end{tabular}
 \end{table}
 
@@ -231,7 +230,9 @@ First, we build a basic model. Only variable 'sch' is considered as a random eff
 
 \begin{align*}
     math_i 
-    &= \beta_0 + \beta_1*cltype_i + \beta_2*ses_i + \beta_3*eth_i + \beta_4*se_i + \beta_5*schtype_i \\
+    &= \beta_0 + \beta_1*I_{cltype_i='reg'} + \beta_2*I_{cltype_i='reg+A'} + \beta_3*I_{ses_i='N'} \\
+    &+ \beta_4*I_{eth_i='B'} + \beta_5*I_{eth_i='A'} + \beta_6*I_{eth_i='H'} + \beta_7*I_{eth_i='O'} \\
+    &+ \beta_8*I_{se_i='F'} + \beta_9*I_{schtype_i='suburb'} + \beta_{10}*I_{schtype_i='rural'} + \beta_{11}*I_{schtype_i='urban'}\\
     &+ sch_{j[i]} + \sigma_e\\
     sch_j &\sim N(0, \sigma_{sch})\\
 \end{align*}
@@ -244,7 +245,9 @@ Through 'step' function in 'lmerTest' R-package, three variables 'cltype', 'se',
 and the new model looks like:
 
 \begin{align*}
-    math_i &= \beta_0 + \beta_1*cltype_i + \beta_2*ses_i + \beta_3*eth_i + sch_{j[i]} + \sigma_e\\
+    math_i &= \beta_0 + \beta_1*I_{cltype_i='reg'} + \beta_2*I_{cltype_i='reg+A'} + \beta_3*I_{ses_i='N'} \\
+    &+ \beta_4*I_{eth_i='B'} + \beta_5*I_{eth_i='A'} + \beta_6*I_{eth_i='H'} + \beta_7*I_{eth_i='O'} \\
+    &+ sch_{j[i]} + \sigma_e\\
     sch_j &\sim N(0, \sigma_{sch})\\
 \end{align*}
 
@@ -266,7 +269,9 @@ while the situation in 1979 was the opposite.
 Because of this, variable 'birthq' is added in the model as a random effect. And our model becomes:
 
 \begin{align*}
-    math_i &= \beta_0 + \beta_1*cltype_i + \beta_2*ses_i + \beta_3*eth_i + sch_{j[i]} + birthq_{k[i]} + \sigma_e\\
+    math_i &= \beta_0 + \beta_1*I_{cltype_i='reg'} + \beta_2*I_{cltype_i='reg+A'} + \beta_3*I_{ses_i='N'} \\
+    &+ \beta_4*I_{eth_i='B'} + \beta_5*I_{eth_i='A'} + \beta_6*I_{eth_i='H'} + \beta_7*I_{eth_i='O'} \\ 
+    &+ sch_{j[i]} + birthq_{k[i]} + \sigma_e\\
     sch_j &\sim N(0, \sigma_{sch})\\
     birthq_k &\sim N(0, \sigma_{birthq})\\
 \end{align*}
@@ -284,9 +289,11 @@ From the plot we can see that the slopes of straight lines vary among different 
 but the degrees of the effect are different among schools. Thus, take school as random slope may be a good choice. The model shows below:
 
 \begin{align*}
-    math_i &= \beta_{0i} + \beta_{1i}*cltype_i + \beta_2*ses_i + \beta_3*eth_i + \sigma_e\\
-    \beta_{0i} &\sim N(sch_{j[i]}, \sigma_1)\\
+    math_i &= \beta_{0i} + \beta_{1i}*I_{cltype_i='reg'} + \beta_{2i}*I_{cltype_i='reg+A'} + \beta_3*I_{ses_i='N'} \\
+    &+ \beta_4*I_{eth_i='B'} + \beta_5*I_{eth_i='A'} + \beta_6*I_{eth_i='H'} + \beta_7*I_{eth_i='O'} + \sigma_e\\
+    \beta_{0i} &\sim N(sch_{j[i]}, \sigma_2)\\
     \beta_{1i} &\sim N(sch_{j[i]}, \sigma_2)\\
+    \beta_{2i} &\sim N(sch_{j[i]}, \sigma_2)\\
 \end{align*}
 
 \subsection{Model Selection}

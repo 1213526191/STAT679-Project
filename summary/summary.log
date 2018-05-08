@@ -1,16 +1,16 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.5.20)  5 MAY 2018 21:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.5.20)  8 MAY 2018 16:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/Lyf/Desktop/STAT679-Project-master/summary/summary.tex
-(/Users/Lyf/Desktop/STAT679-Project-master/summary/summary.tex
+**/Users/Lyf/Github/STAT679-Project/summary/summary.tex
+(/Users/Lyf/Github/STAT679-Project/summary/summary.tex
 LaTeX2e <2016/03/31>
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -137,35 +137,61 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count101
+\Gm@cntv=\count102
+\c@Gm@tempcnt=\count103
+\Gm@bindingoffset=\dimen121
+\Gm@wd@mp=\dimen122
+\Gm@odd@mp=\dimen123
+\Gm@even@mp=\dimen124
+\Gm@layoutwidth=\dimen125
+\Gm@layoutheight=\dimen126
+\Gm@layouthoffset=\dimen127
+\Gm@layoutvoffset=\dimen128
+\Gm@dimlist=\toks21
+)
 (./summary.aux)
 \openout1 = `summary.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count101
-\scratchdimen=\dimen121
+\scratchcounter=\count104
+\scratchdimen=\dimen129
 \scratchbox=\box28
-\nofMPsegments=\count102
-\nofMParguments=\count103
-\everyMPshowfont=\toks21
-\MPscratchCnt=\count104
-\MPscratchDim=\dimen122
-\MPnumerator=\count105
-\makeMPintoPDFobject=\count106
-\everyMPtoPDFconversion=\toks22
+\nofMPsegments=\count105
+\nofMParguments=\count106
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count107
+\MPscratchDim=\dimen130
+\MPnumerator=\count108
+\makeMPintoPDFobject=\count109
+\everyMPtoPDFconversion=\toks23
 ) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -173,9 +199,6 @@ Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -216,12 +239,47 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--26
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(74.68848pt, 448.1309pt, 74.68849pt)
+* v-part:(T,H,B)=(84.50467pt, 633.78513pt, 126.75705pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=448.1309pt
+* \textheight=633.78513pt
+* \oddsidemargin=2.41849pt
+* \evensidemargin=2.41849pt
+* \topmargin=-24.76532pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=50.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--28
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--35
+Underfull \hbox (badness 10000) in paragraph at lines 31--37
 
  []
 
@@ -229,7 +287,18 @@ Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
+Underfull \hbox (badness 10000) in paragraph at lines 38--42
+
+ []
+
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--49
 
  []
 
@@ -238,36 +307,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--40
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--45
-
- []
-
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-
-Underfull \hbox (badness 10000) in paragraph at lines 46--50
-
- []
-
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
 Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--55
+Underfull \hbox (badness 10000) in paragraph at lines 52--54
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--62
+Underfull \hbox (badness 10000) in paragraph at lines 55--61
 
  []
 
@@ -283,20 +333,24 @@ Missing character: There is no ò in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
-
-Overfull \hbox (9.584pt too wide) in paragraph at lines 67--76
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 84.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 83.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 84.
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 83.
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
@@ -307,26 +361,6 @@ Missing character: There is no ô in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (12.2508pt too wide) in paragraph at lines 147--158
- [][] 
- []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -335,47 +369,47 @@ Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--166
+Underfull \hbox (badness 10000) in paragraph at lines 161--165
 
  []
 
-[3]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--172
+Underfull \hbox (badness 10000) in paragraph at lines 166--171
 
  []
 
-<../plot/school.png, id=19, 2107.875pt x 1204.5pt>
+[3] <../plot/school.png, id=19, 2107.875pt x 1204.5pt>
 File: ../plot/school.png Graphic file (type png)
- <use ../plot/school.png>
-Package pdftex.def Info: ../plot/school.png used on input line 176.
+
+<use ../plot/school.png>
+Package pdftex.def Info: ../plot/school.png used on input line 175.
 (pdftex.def)             Requested size: 316.1676pt x 180.6672pt.
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 173--179
+Overfull \hbox (17.0pt too wide) in paragraph at lines 172--178
 []$[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--179
+Underfull \hbox (badness 10000) in paragraph at lines 172--178
 
  []
 
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 180--182
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--182
 
  []
 
-<../plot/mathread.png, id=24, 2107.875pt x 1204.5pt>
+<../plot/mathread.png, id=21, 2107.875pt x 1204.5pt>
 File: ../plot/mathread.png Graphic file (type png)
 
 <use ../plot/mathread.png>
 Package pdftex.def Info: ../plot/mathread.png used on input line 186.
 (pdftex.def)             Requested size: 316.1676pt x 180.6672pt.
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 183--189
+Overfull \hbox (17.0pt too wide) in paragraph at lines 183--189
 []$[]$ 
  []
 
@@ -384,18 +418,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 183--189
 
  []
 
-
+[4 <../plot/school.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 190--192
 
  []
 
-<../plot/math.png, id=25, 2107.875pt x 1204.5pt>
+<../plot/math.png, id=26, 2107.875pt x 1204.5pt>
 File: ../plot/math.png Graphic file (type png)
  <use ../plot/math.png>
 Package pdftex.def Info: ../plot/math.png used on input line 196.
 (pdftex.def)             Requested size: 316.1676pt x 180.6672pt.
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 193--199
+Overfull \hbox (17.0pt too wide) in paragraph at lines 193--199
 []$[]$ 
  []
 
@@ -404,7 +438,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 193--199
 
  []
 
-[5 <../plot/school.png> <../plot/mathread.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 200--202
 
  []
@@ -414,13 +448,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 203--204
 
  []
 
-<../plot/p24.png, id=31, 4215.75pt x 4215.75pt>
+<../plot/p24.png, id=27, 4215.75pt x 4215.75pt>
 File: ../plot/p24.png Graphic file (type png)
  <use ../plot/p24.png>
 Package pdftex.def Info: ../plot/p24.png used on input line 208.
 (pdftex.def)             Requested size: 337.26689pt x 337.26689pt.
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 205--211
+Overfull \hbox (17.0pt too wide) in paragraph at lines 205--211
 []$[]$ 
  []
 
@@ -429,24 +463,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 205--211
 
  []
 
-[6 <../plot/math.png>]
+[5 <../plot/mathread.png> <../plot/math.png>]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
-Missing character: There is no Œ in font cmr10!
-Missing character: There is no ≤ in font cmr10!
- [7 <../plot/p24.png>]
-Overfull \hbox (56.10081pt too wide) in paragraph at lines 238--238
-[] 
- []
-
-<../plot/birthq.png, id=41, 2107.875pt x 1204.5pt>
+ [6 <../plot/p24.png>]
+<../plot/birthq.png, id=39, 2107.875pt x 1204.5pt>
 File: ../plot/birthq.png Graphic file (type png)
  <use ../plot/birthq.png>
 Package pdftex.def Info: ../plot/birthq.png used on input line 261.
 (pdftex.def)             Requested size: 316.1676pt x 180.6672pt.
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 258--264
+Overfull \hbox (17.0pt too wide) in paragraph at lines 258--264
 []$[]$ 
  []
 
@@ -455,14 +483,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 258--264
 
  []
 
-[8] <../plot/random_slope.jpg, id=49, 2107.875pt x 1204.5pt>
+[7 <../plot/birthq.png>]
+<../plot/random_slope.jpg, id=47, 2107.875pt x 1204.5pt>
 File: ../plot/random_slope.jpg Graphic file (type jpg)
 
 <use ../plot/random_slope.jpg>
 Package pdftex.def Info: ../plot/random_slope.jpg used on input line 284.
 (pdftex.def)             Requested size: 316.1676pt x 180.6672pt.
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 281--287
+Overfull \hbox (17.0pt too wide) in paragraph at lines 281--287
 []$[]$ 
  []
 
@@ -471,14 +500,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 281--287
 
  []
 
-[9 <../plot/birthq.png>] <../plot/rhat.jpg, id=54, 1066.98625pt x 454.69875pt>
+<../plot/rhat.jpg, id=48, 1066.98625pt x 454.69875pt>
 File: ../plot/rhat.jpg Graphic file (type jpg)
-
-<use ../plot/rhat.jpg>
+ <use ../plot/rhat.jpg>
 Package pdftex.def Info: ../plot/rhat.jpg used on input line 307.
 (pdftex.def)             Requested size: 320.09834pt x 136.41068pt.
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 304--310
+Overfull \hbox (17.0pt too wide) in paragraph at lines 304--310
 []$[]$ 
  []
 
@@ -487,79 +515,87 @@ Underfull \hbox (badness 10000) in paragraph at lines 304--310
 
  []
 
-[10 <../plot/random_slope.jpg>]
-Overfull \hbox (73.90643pt too wide) in paragraph at lines 319--333
+[8 <../plot/random_slope.jpg>]
+<../plot/traceplot.jpg, id=53, 966.61125pt x 673.51625pt>
+File: ../plot/traceplot.jpg Graphic file (type jpg)
+
+<use ../plot/traceplot.jpg>
+Package pdftex.def Info: ../plot/traceplot.jpg used on input line 314.
+(pdftex.def)             Requested size: 386.63765pt x 269.40172pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 311--317
+[]$[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--317
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 318--321
+
+ []
+
+
+Overfull \hbox (31.38846pt too wide) in paragraph at lines 326--340
  [][] 
  []
 
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--338
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 339--342
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 343--344
-
- []
-
-[11 <../plot/rhat.jpg>]
-Overfull \hbox (67.75069pt too wide) in paragraph at lines 359--365
- [][] 
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 372--374
+Underfull \hbox (badness 10000) in paragraph at lines 342--346
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 375--379
+Underfull \hbox (badness 10000) in paragraph at lines 347--350
+
+ []
+
+[9 <../plot/rhat.jpg> <../plot/traceplot.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 351--352
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 401--403
 
  []
 
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-[12] (./summary.aux) ) 
+[11] (./summary.aux) ) 
 Here is how much of TeX's memory you used:
- 3253 strings out of 493014
- 49555 string characters out of 6133351
- 125377 words of memory out of 5000000
- 6762 multiletter control sequences out of 15000+600000
- 9369 words of font info for 34 fonts, out of 8000000 for 9000
+ 3737 strings out of 493014
+ 56749 string characters out of 6133351
+ 136412 words of memory out of 5000000
+ 7236 multiletter control sequences out of 15000+600000
+ 9709 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,9n,39p,289b,266s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,9n,39p,281b,264s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmi5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/
+nts/cm/cmmi6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mr17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
-.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.p
-fb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pf
-b>
-Output written on summary.pdf (12 pages, 1591623 bytes).
+8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.p
+fb>
+Output written on summary.pdf (11 pages, 2215147 bytes).
 PDF statistics:
- 106 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
+ 101 PDF objects out of 1000 (max. 8388607)
+ 60 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

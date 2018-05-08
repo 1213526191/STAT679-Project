@@ -1,10 +1,12 @@
-\documentclass{article}
+\documentclass[11pt,a4paper]{article}
 
 \usepackage{amsmath}
 \usepackage{enumerate}
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{indentfirst}
+\usepackage{geometry} 
+\geometry{a4paper,scale=0.75}
 
 \begin{document}
 
@@ -41,11 +43,8 @@ ratio on students’ read and math test scores.\\
 \section{Research Questions}
 
 Our major interest includes two aspects: how students achievements are affected by reduced class size and how the effect varies 
-among other factors (socioeconomic status etc.); what other factors are associated with students’ achievements. \\
-
-To quantify students’ achievements, we choose a subset of the dataset where the students have four-year records and stay in the 
-same class type for four consecutive years  in order to simplify question and save simulation time. Our goal is to find the 
-relation between mean of math scores for four years and the class type. That is, does the class type affect the students’ 
+among other factors (socioeconomic status etc.); what other factors are associated with students’ achievements. Specifally speaking, 
+Our goal is to find the relation between mean of math scores for four years and the class type. That is, does the class type affect the students’ 
 performance in math exam?\\
 
 \section{Data}
@@ -177,8 +176,9 @@ are constant for each student among the four years: ses, sx, eth, birthq, birthy
     \captionof{figure}{School Size}\label{fig:school}
 \end{minipage}\\
 
-From Fiture \ref{fig:school}, the number of data in different schools is unbalanced. Because of this, 
-variable 'sch' is taken as a random effect.\\
+From Fiture \ref{fig:school}, the total number of students in different schools is imbalanced. Notice that there exists two schools 
+containing only 
+one student, taking variable 'sch' as a random effect is a better choice.\\
 
 \begin{minipage}{\linewidth}
     \makebox[\linewidth]{
@@ -197,10 +197,10 @@ which means we can choose either of the two to be our dependent variable. We jus
     \captionof{figure}{Distribution of math}\label{fig:math}
 \end{minipage}\\
 
-From Fiture \ref{fig:math}, the distribution of math score is closed to normal distribution. And after $\log$ transformation, 
+From Fiture \ref{fig:math}, the distribution of math score is close to normal distribution. And after $\log$ transformation, 
 the assumption of normal distribution does not improve much. So math is taken as dependent variable without transformation.\\
 
-Next, we draw the plot to obtain the relation between the mean of math score and the other variables.\\
+Next, we draw several plots to explore the relationship between the mean of math score and the other variables.\\
 
 \begin{minipage}{\linewidth}
     \makebox[\linewidth]{
@@ -218,7 +218,7 @@ Other variables should be examined by model using F-test which can hardly be jud
 
 The fixed effects model is inappropriate for this task because it does not take into account the fact that the students are grouped 
 by schools. It leads to a violation of the independence of errors assumption. In linear mixed models, we take this by-school 
-variability into account by adding adjustment terms u0j which adjust β0 for school j. In our analysis a series of random intercept 
+variability into account by adding adjustment terms $\mu_{0j}$ which adjust $\beta_0$ for school $j$. In our analysis a series of random intercept 
 mixed effects models are fitted, with school as random effect and other predictor variables as fixed effects. 
 
 \subsection{Model 0}
@@ -226,7 +226,7 @@ mixed effects models are fitted, with school as random effect and other predicto
 
 
 First, we build a basic model. Only variable 'sch' is considered as a random effect and all other variables including 'ses', 'eth', 
-'cltype', 'se', 'schtype' as fixed effects. The basic model is in this form:
+'cltype', 'sx', 'schtype' as fixed effects. The basic model is in this form:
 
 \begin{align*}
     math_i 
@@ -241,7 +241,7 @@ First, we build a basic model. Only variable 'sch' is considered as a random eff
 
 Since the basic model contains all possible important variables, the next step is to drop the variables that are not significant. 
 Backward elimination method here is used to delete variables one by one and the criterion for deleting variables is the F-test. 
-Through 'step' function in 'lmerTest' R-package, three variables 'cltype', 'se', 'schtype' are considered as insignigicant, 
+Through 'step' function in 'lmerTest' R-package, three variables 'sx', 'schtype' are considered as insignificant, 
 and the new model looks like:
 
 \begin{align*}
@@ -285,8 +285,8 @@ Because of this, variable 'birthq' is added in the model as a random effect. And
     \captionof{figure}{The influence of schools on the relationship between cltype and math}\label{fig:random slope}
 \end{minipage}\\
 
-From the plot we can see that the slopes of straight lines vary among different schools. Class type affect the mean of math score, 
-but the degrees of the effect are different among schools. Thus, take school as random slope may be a good choice. The model shows below:
+From the plot we can see that the slopes of straight lines vary among different schools. Class type affects the mean of math score, 
+but the degrees of the effect are different among schools. Thus, take school as random slope may be a good choice. The model is shown below:
 
 \begin{align*}
     math_i &= \beta_{0i} + \beta_{1i}*I_{cltype_i='reg'} + \beta_{2i}*I_{cltype_i='reg+A'} + \beta_3*I_{ses_i='N'} \\
@@ -298,7 +298,7 @@ but the degrees of the effect are different among schools. Thus, take school as 
 
 \subsection{Model Selection}
 
-After building all four models with stan, we find that all estimations all converge. So we use BIC method to select the final model. 
+After building all four models with stan, we find that all estimations converge. Then we use BIC method to select the final model. 
 The result is Model $2<3<<1<0$, and since Model 2 is simpler than Model 3, we choose Model 2 as our final model.
 
 \begin{minipage}{\linewidth}
@@ -308,31 +308,39 @@ The result is Model $2<3<<1<0$, and since Model 2 is simpler than Model 3, we ch
     \captionof{figure}{Diagnostic of Model 2}\label{fig:rhat}
 \end{minipage}\\
 
-From Figure \ref{fig:rhat}, $\hat{R}$ shows that our model converges. Estimations of parameters in model 3 are listed below in 
-Table \ref{tab:estimation}. Since the number of levels of the random effect 'sch' exceeds 60, 
-only the first two schools' estimates are listed in the table.
+\begin{minipage}{\linewidth}
+    \makebox[\linewidth]{
+      \includegraphics[scale=0.4]{../plot/traceplot.jpg}
+      }
+    \captionof{figure}{Traceplot of Model 2}\label{fig:traceplot}
+\end{minipage}\\
+
+From Figure \ref{fig:rhat} and Figure \ref{fig:traceplot}, $\hat{R}$ and traceplot shows that our model converges. The posterior distributions of each of the parameters
+is summarized in Table \ref{tab:estimation}. Since the number of levels of the random effect 'sch' exceeds 60, 
+only the first two schools' estimates are listed in the table.\\
 
 \begin{table}[h]
     \centering
-    \caption{Estimations of parameters}
+    \caption{Estimations of parameters in stan}
     \label{tab:estimation}
     \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|}
     \hline
-    Variable      & n\_reff & Rhat & mean           & mcse & sd   & 2.5\% & 25\%  & 50\%  & 75\%  & 97.5\% \\ \hline
-    Intercept     & 1249    & 1    & 560.2          & 0.2  & 6.3  & 546.9 & 556.4 & 560.4 & 564.1 & 572.1  \\ \hline
-    cltype: reg   & 6000    & 1    & \textit{-10.1} & 0    & 2.5  & -15.1 & -11.8 & -10.1 & -8.4  & -5.2   \\ \hline
-    cltype: reg+A & 6000    & 1    & \textbf{-9.2}  & 0    & 2.2  & -13.6 & -10.7 & -9.2  & -7.6  & -4.9   \\ \hline
-    ses: N        & 6000    & 1    & 14.7           & 0    & 2.3  & 10.1  & 13.2  & 14.7  & 16.2  & 19.2   \\ \hline
-    eth: B        & 5061    & 1    & -16.3          & 0    & 3.2  & -22.8 & -18.5 & -16.3 & -14.2 & -10    \\ \hline
-    eth: A        & 6000    & 1    & -13.4          & 0.3  & 22.4 & -57.5 & -28.7 & -13.2 & 1.8   & 30.4   \\ \hline
-    eth: H        & 6000    & 1    & 4.4            & 0.3  & 21.7 & -37.6 & -10.7 & 4.6   & 19.1  & 46     \\ \hline
-    eth: O        & 6000    & 1    & 18.3           & 0.4  & 30.7 & -42   & -2    & 18.4  & 38.9  & 77.6   \\ \hline
-    sch: 2        & 6000    & 1    & 6.3            & 0.1  & 7.1  & -7.4  & 1.5   & 6.2   & 11    & 20.6   \\ \hline
-    sch: 3        & 6000    & 1    & -12.2          & 0.1  & 9.1  & -30.6 & -18.5 & -12.1 & -5.9  & 5      \\ \hline
+    \textbf{Variable}      & \textbf{n\_reff} & \textbf{Rhat} & \textbf{mean}  & \textbf{mcse} & \textbf{sd}   & \textbf{2.5\%} & \textbf{25\%}  & \textbf{50\%}  & \textbf{75\%}  & \textbf{97.5\%} \\ \hline
+    \textbf{Intercept}     & 1249    & 1    & 560.2          & 0.2  & 6.3  & 546.9 & 556.4 & 560.4 & 564.1 & 572.1  \\ \hline
+    \textbf{cltype: reg}   & 6000    & 1    & -10.1          & 0    & 2.5  & -15.1 & -11.8 & -10.1 & -8.4  & -5.2   \\ \hline
+    \textbf{cltype: reg+A} & 6000    & 1    & -9.2           & 0    & 2.2  & -13.6 & -10.7 & -9.2  & -7.6  & -4.9   \\ \hline
+    \textbf{ses: N}        & 6000    & 1    & 14.7           & 0    & 2.3  & 10.1  & 13.2  & 14.7  & 16.2  & 19.2   \\ \hline
+    \textbf{eth: B}        & 5061    & 1    & -16.3          & 0    & 3.2  & -22.8 & -18.5 & -16.3 & -14.2 & -10    \\ \hline
+    \textbf{eth: A}        & 6000    & 1    & -13.4          & 0.3  & 22.4 & -57.5 & -28.7 & -13.2 & 1.8   & 30.4   \\ \hline
+    \textbf{eth: H}        & 6000    & 1    & 4.4            & 0.3  & 21.7 & -37.6 & -10.7 & 4.6   & 19.1  & 46     \\ \hline
+    \textbf{eth: O}        & 6000    & 1    & 18.3           & 0.4  & 30.7 & -42   & -2    & 18.4  & 38.9  & 77.6   \\ \hline
+    \textbf{sch: 2}        & 6000    & 1    & 6.3            & 0.1  & 7.1  & -7.4  & 1.5   & 6.2   & 11    & 20.6   \\ \hline
+    \textbf{sch: 3}        & 6000    & 1    & -12.2          & 0.1  & 9.1  & -30.6 & -18.5 & -12.1 & -5.9  & 5      \\ \hline
     \end{tabular}
 \end{table}
 
-The estimate of 'cltype: reg' is $-10.1$ which is negative. It shows that students in small class type significantly have better 
+The 95\% credible interval for the
+estimate of 'cltype: reg' is below zero, thus there is strong evidence that students in small class type significantly have better 
 performance in math than those in regular class. The estimate of 'cltype: reg+A' is $-9.2$, slightly larger than $-10.1$. 
 And this tells us that teachers aide slightly improve students’ math performance, but small class type is still much better than it.\\
 
@@ -342,15 +350,28 @@ parents can provide them with better learning resources.\\
 
 The estimate of different 'eth' indicates that students with different trace tend to have different performance.\\
 
-\section{Summary}
 
-The final model answers research question: 
-\begin{itemize}
-    \item class size significantly affects performance of students on math.
-    \item 'ses' along with 'eth' also have influence on performance of students on math.
-\end{itemize}
+Table \ref{tab:lmer} is the result of 'lmer' function. The result is similar with those in stan.
 
-We also compare our model with regular linear model $math ~ cltype + ses + eth$.
+\begin{table}[h]
+    \centering
+    \caption{Estimations of parameters in lmer}
+    \label{tab:lmer}
+    \begin{tabular}{|l|l|l|l|l|}
+    \hline
+    \textbf{Variable}    & \textbf{mean} & \textbf{sd} & \textbf{2.5\%} & \textbf{97.5\%} \\ \hline
+    \textbf{Intercept}   & 559.225       & 5.717       & 546.567096     & 570.300773      \\ \hline
+    \textbf{cltypereg}   & -10.059       & 2.502       & -14.976355     & -5.177628       \\ \hline
+    \textbf{cltypereg+A} & -9.247        & 2.227       & -13.590642     & -4.875379       \\ \hline
+    \textbf{sesN}        & 14.659        & 2.292       & 10.181001      & 19.164992       \\ \hline
+    \textbf{ethB}        & -16.306       & 3.277       & -22.751790     & -9.868099       \\ \hline
+    \textbf{ethA}        & -13.040       & 22.465      & -56.832600     & 31.097515       \\ \hline
+    \textbf{ethH}        & 4.519         & 21.869      & -38.263411     & 47.301601       \\ \hline
+    \textbf{ethO}        & 18.307        & 30.694      & -41.706789     & 78.394592       \\ \hline
+    \end{tabular}
+\end{table}
+
+We also compare our model with regular linear model $math \sim cltype + ses + eth$.
 
 \begin{table}[h]
     \centering
@@ -367,18 +388,37 @@ We also compare our model with regular linear model $math ~ cltype + ses + eth$.
 From Table \ref{tab:lm}, we can see that the estimates of coefficients in both models are slightly different except 
 'eth: B' and 'eth: A'. After calculating BIC, Multilevel Model is better than Linear Model.
 
+\section{Summary}
+
+The final model answers research question: 
+\begin{itemize}
+    \item Class size significantly affects performance of students on math.
+    \item 'ses' along with 'eth' also have influence on performance of students on math.
+\end{itemize}
+
 \section{Future Work}
 
-All our analysis above focus on factors affect math scores, if given more time we can take a look at the factors which affect the 
-read scores. It’s interesting to see whether two sets of factors are the same or not.\\
+All our analysis above focuses on factors that affect math scores, if given more time we can take a look at the factors which affect the 
+read scores. It is interesting to see whether two sets of factors are the same or not.\\
 
 If time permits, more interesting questions can be discussed. Based on the whole dataset, we are curious to find if class type 
 affect the test scores when the grade goes up. Or what differences will be made on the test scores if a student change the class 
 type even change the school during the four consecutive years. We can both discuss the student level and school level which are 
-more complex.\\
+more complex.
 
-What’s more, there are six levels of student’s ethnicity in the full dataset while five levels in the subset. The change of 
-effect of ethnicity on test scores is worth to discuss.
+\section{Reflection}
+
+\begin{enumerate}
+    \item We learned strength and weakness of multilevel model and
+    how to apply it to educational research, which can also generalize to other fields such as linguistic, biology etc. 
+
+
+    \item The whole process of data analysis, from data collection, data cleaning to statistical modeling and insightful inference.
+
+
+    \item The best way to learn is doing a project by ourselves from start to end. It’s important to understand the theoretical 
+    knowledge well, but more important is knowing how to apply statistical methods to answer questions of interest.
+\end{enumerate}
 
 
 \end{document}
